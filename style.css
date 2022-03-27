@@ -1,5 +1,6 @@
 body {
-  background: rgb(160, 98, 141);
+  --background: rgb(51, 51, 51);
+  background: var(--background);
 }
 
 #tunnel {
@@ -11,7 +12,9 @@ body {
   background: radial-gradient(circle,
    rgba(0,0,0,1) 10%, 
    rgba(0,0,0,0) 50%, 
-   rgba(0,0,0,1) 60%);
+   rgba(154,78,200,1) 56%,
+   rgba(154,78,200,1) 58%,
+   var(--background) 65%);
   border-radius: 50%;
   position: absolute;
 }
@@ -34,6 +37,7 @@ body {
   animation-name: tunnel-effect;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes tunnel-effect {
