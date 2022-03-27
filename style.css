@@ -54,3 +54,29 @@ body {
     left: 0%;
   }
 }
+
+#arrow {
+  animation-name: arrow-idle;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+
+  position: absolute;
+  width: 100px;
+  left: calc((var(--diameter) - 100px) / 2);
+  top: 75%;
+}
+
+@keyframes arrow-idle {
+  from {
+    width: 100px;
+    top: 75%;
+    left: calc((var(--diameter) - 100px) / 2);
+  }
+  to {
+    width: 120px;
+    top: 77%;
+    left: calc((var(--diameter) - 120px) / 2);
+  }
+}
