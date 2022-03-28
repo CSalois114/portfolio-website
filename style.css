@@ -97,7 +97,7 @@ body {
   animation-timing-function: linear;
   animation-play-state: paused;
 
- 
+ background: whitesmoke;
   position: absolute;
   width: var(--contentDiameter);
   border: 5px solid rgb(63, 5, 63);
