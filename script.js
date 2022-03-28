@@ -25,5 +25,5 @@ contentImage.addEventListener("mouseout", function() {
 })
 
 contentImage.addEventListener("click", function() {
-  alert("Links not yet set up. Sorry!")
+  alert("Link not yet set up. Sorry!")
 })

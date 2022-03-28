@@ -7,8 +7,8 @@ body {
   --diameter: 900px;
   width: var(--diameter);
   height: var(--diameter);
-  top: calc(50% - var(--diameter) / 2);
-  left: calc(50% - var(--diameter) / 2);
+  top: calc(50% - (var(--diameter) / 2 + 1px) );
+  left: calc(50% - (var(--diameter) / 2 + 1px) );
   background: radial-gradient(circle,
    rgba(0,0,0,1) 10%, 
    rgba(0,0,0,0) 50%, 
@@ -17,6 +17,7 @@ body {
    var(--background) 65%);
   border-radius: 50%;
   position: absolute;
+  border: 1px solid var(--background);
 }
 
 .ring {
@@ -81,11 +82,12 @@ body {
   }
 }
 
-#content {
+#content { 
+  --contentDiameter: 230px;
   position: absolute;
-  width: 170px;
-  left: calc((var(--diameter) - 180px) / 2);
-  top: calc((var(--diameter) - 180px) / 2);
+  width: var(--contentDiameter);
+  left: calc((var(--diameter) - var(--contentDiameter) - 10px) / 2);
+  top: calc((var(--diameter) - var(--contentDiameter) - 10px) / 2);
   opacity: 1;
 }
 
@@ -95,7 +97,7 @@ body {
   animation-timing-function: linear;
   animation-play-state: paused;
 
-  --contentDiameter: 170px;
+ 
   position: absolute;
   width: var(--contentDiameter);
   border: 5px solid rgb(63, 5, 63);
