@@ -90,16 +90,39 @@ body {
 }
 
 #contentImage {
-  width: 100%;
+  animation-name: content-scroll;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+
+  --contentDiameter: 170px;
+  position: absolute;
+  width: var(--contentDiameter);
   border: 5px solid rgb(63, 5, 63);
   border-radius: 50%;
 }
 
-#contentLink {
+@keyframes content-scroll {
+  from {
+    width: 0%;
+    left: calc(var(--contentDiameter) / 2);
+    top: calc(var(--contentDiameter) / 2);
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+#contentTitle {
+  opacity: 0;
   font-family: 'Brush Script MT', cursive;
   text-align: center;
   position: absolute;
   color: aquamarine;
   width: 100%;
-  top: -30%;
+  top: -60px;
 }
