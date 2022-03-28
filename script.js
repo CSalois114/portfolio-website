@@ -9,3 +9,7 @@ arrow.addEventListener('mouseout', function() {
   arrow.style.background = "";
   arrow.style.animationPlayState = "";
 });
+
+arrow.addEventListener("click", function() {
+  
+})
