@@ -68,12 +68,12 @@ body {
   top: 75%;
 }
 
-#arrow:hover {
+/*#arrow:hover {
   animation-play-state: paused;
   background: radial-gradient(circle, 
   rgb(209, 206, 255,.8) 0%, 
   rgba(0,0,0,0) 50%);
-}
+}*/
 
 @keyframes arrow-idle {
   from {
@@ -93,6 +93,7 @@ body {
   width: 170px;
   left: calc((var(--diameter) - 180px) / 2);
   top: calc((var(--diameter) - 180px) / 2);
+  opacity: 1;
 }
 
 #contentImage {
