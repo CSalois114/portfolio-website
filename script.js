@@ -19,7 +19,6 @@ const images = [
   }
 ];
 
-
 arrow.addEventListener('mouseover', function() {
   arrow.style.background = 
     "radial-gradient(circle at 50% 35%, rgb(209, 206, 255,.8) 0%, rgba(0,0,0,0) 35%)";
@@ -51,6 +50,10 @@ function changeContent() {
   const contentTitle = document.getElementById("contentTitle");
   contentTitle.innerText = images[i].title;
   contentTitle.style.opacity = 0;
+
+  contentImage.addEventListener("animationend", function() {
+    contentTitle.style.opacity = .3;
+  })
 
   contentImage.addEventListener("click", function() {
     alert(`Link is not set up yet. Sorry!`)
