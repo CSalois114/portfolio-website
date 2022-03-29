@@ -1,4 +1,6 @@
 const arrow = document.getElementById('arrow');
+const tunnel = document.getElementById('tunnelAnimation');
+var i = 0;
 const images = [
   {
     file: 'chris.jpeg',
@@ -16,7 +18,7 @@ const images = [
     link: "linkedin.com"
   }
 ];
-var i = 0;
+
 
 arrow.addEventListener('mouseover', function() {
   arrow.style.background = "radial-gradient(circle, rgb(209, 206, 255,.8) 0%, rgba(0,0,0,0) 50%)";
@@ -24,20 +26,30 @@ arrow.addEventListener('mouseover', function() {
 });
 
 arrow.addEventListener('mouseout', function() {
-  arrow.style.background = "";
-  arrow.style.animationPlayState = "";
+  arrow.style.background = null;
+  arrow.style.animationPlayState = "running";
 });
 
 arrow.addEventListener("click", function() {
   const contentImage = document.getElementById("contentImage");
-  resetContentAnimation();
+  resetContentNode();
   changeContent();
   addContentListeners();
-})
+});
 
-function resetContentAnimation() {
+function resetContentNode() {
   const newContentImage = contentImage.cloneNode();
-  contentImage.parentNode.replaceChild(newContentImage, contentImage);contentImage.style.animationPlayState = "running";
+  contentImage.parentNode.replaceChild(newContentImage, contentImage);
+
+  contentImage.style.animationPlayState = "running";
+
+  contentImage.addEventListener("animationstart", function() {
+    tunnel.style.animationPlayState = "running";
+  });
+  
+  contentImage.addEventListener("animationend", function() {
+      tunnel.style.animationPlayState = "paused";
+  });
 }
 
 function changeContent() {
