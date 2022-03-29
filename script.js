@@ -42,14 +42,6 @@ function resetContentNode() {
   contentImage.parentNode.replaceChild(newContentImage, contentImage);
 
   contentImage.style.animationPlayState = "running";
-
-  contentImage.addEventListener("animationstart", function() {
-    tunnel.style.animationPlayState = "running";
-  });
-  
-  contentImage.addEventListener("animationend", function() {
-      tunnel.style.animationPlayState = "paused";
-  });
 }
 
 function changeContent() {

@@ -83,7 +83,7 @@ body {
 }
 
 #content { 
-  --contentDiameter: 230px;
+  --contentDiameter: 200px;
   position: absolute;
   width: var(--contentDiameter);
   left: calc((var(--diameter) - var(--contentDiameter) - 10px) / 2);
@@ -94,7 +94,7 @@ body {
 #contentImage {
   animation-name: content-scroll;
   animation-duration: 2.5s;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in-out;
   animation-play-state: paused;
 
  background: whitesmoke;
