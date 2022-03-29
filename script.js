@@ -21,7 +21,8 @@ const images = [
 
 
 arrow.addEventListener('mouseover', function() {
-  arrow.style.background = "radial-gradient(circle, rgb(209, 206, 255,.8) 0%, rgba(0,0,0,0) 50%)";
+  arrow.style.background = 
+    "radial-gradient(circle at 50% 35%, rgb(209, 206, 255,.8) 0%, rgba(0,0,0,0) 35%)";
   arrow.style.animationPlayState = "paused";
 });
 
