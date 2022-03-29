@@ -121,7 +121,7 @@ body {
 
 #contentTitle {
   opacity: 0;
-  font-family: 'Brush Script MT', cursive;
+  font-family: Brush Script MT, Brush Script Std, cursive;
   text-align: center;
   position: absolute;
   color: aquamarine;
